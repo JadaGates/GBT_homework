@@ -1,0 +1,20 @@
+version: "3"
+
+services:
+  alice:
+    build:
+      context: ./alice
+      dockerfile: Dockerfile
+#    image: "alicetest:0.5"
+    container_name: alt
+    ports:
+      - '8080:8080'
+
+  bob:
+    build:
+      context:  ./bob
+      dockerfile: Dockerfile
+#    image: "bob:0.2"
+    container_name: btc
+    ports:
+      - '8081:8081'
